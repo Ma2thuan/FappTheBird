@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwjfg22qgv2xn"]
+
+[ext_resource type="PackedScene" uid="uid://djy78ck76lnr7" path="res://Scenes/bird.tscn" id="1_lisss"]
+[ext_resource type="Texture2D" uid="uid://cibfr6yn6rwst" path="res://Assest/bg.png" id="2_tppxr"]
+[ext_resource type="PackedScene" uid="uid://c011s4tf6jr6i" path="res://Scenes/ground.tscn" id="3_3ytym"]
+
+[node name="Main" type="Node2D"]
+
+[node name="BackGround" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(1.333, 1)
+texture = ExtResource("2_tppxr")
+
+[node name="Bird" parent="." instance=ExtResource("1_lisss")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Ground" parent="." instance=ExtResource("3_3ytym")]
+position = Vector2(694, 267)
